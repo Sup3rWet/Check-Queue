@@ -25,7 +25,7 @@ def ParseConfig(fileBuffer):
 # fix lib pathing - cwd only for now
 def Connect():
     home = os.path.expanduser("~")
-    with open(os.path.join(home,'.dashcore','dash.conf'), mode='rb') as f:
+    with open(os.path.join(home,'.monoeciCore','monoeci.conf'), mode='rb') as f:
         configFileBuffer = f.read()
     config = ParseConfig(configFileBuffer)
     protocol = 'http'

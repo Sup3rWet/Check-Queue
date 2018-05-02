@@ -1,6 +1,6 @@
 #!/bin/bash
 
-MNLISTCMD="dash-cli masternodelist full 2>/dev/null"
+MNLISTCMD="monoeci-cli masternodelist full 2>/dev/null"
 
 MNADDR=$1
 
@@ -60,9 +60,9 @@ MN_QUEUE_LENGTH=$(echo "$SORTED_MN_LIST" | wc -l)
 MN_QUEUE_POSITION=$(echo "$SORTED_MN_LIST" | grep -A9999999 $MNADDR | wc -l)
 MN_QUEUE_IN_SELECTION=$(( $MN_QUEUE_POSITION <= $(( $MN_QUEUE_LENGTH / 10 )) ))
 
-echo "masternode $MNADDR"
+#echo "masternode $MNADDR"
 if [ $MN_VISIBLE -gt 0 ]; then
-    echo " -> queue position $MN_QUEUE_POSITION/$MN_QUEUE_LENGTH"
+    echo " MONOECI POSITION: $MN_QUEUE_POSITION/$MN_QUEUE_LENGTH"
     if [ $MN_QUEUE_IN_SELECTION -gt 0 ]; then
         echo " -> SELECTION PENDING"
     fi
