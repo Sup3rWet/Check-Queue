@@ -62,7 +62,7 @@ MN_QUEUE_IN_SELECTION=$(( $MN_QUEUE_POSITION <= $(( $MN_QUEUE_LENGTH / 10 )) ))
 
 #echo "masternode $MNADDR"
 if [ $MN_VISIBLE -gt 0 ]; then
-    echo " MONOECI POSITION: $MN_QUEUE_POSITION/$MN_QUEUE_LENGTH"
+    echo " MONOECI POSITION:  $MN_QUEUE_POSITION/$MN_QUEUE_LENGTH"
     if [ $MN_QUEUE_IN_SELECTION -gt 0 ]; then
         echo " -> SELECTION PENDING"
     fi
